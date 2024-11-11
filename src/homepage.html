@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage - Africa Theme</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-gradient-to-r from-yellow-500 to-red-500 shadow-lg py-4">
+    <div class="container mx-auto flex items-center justify-between px-4 lg:px-10">
+      <div class="text-white font-semibold text-xl">African Horizons</div>
+      <nav class="hidden md:flex space-x-8">
+        <a href="homepage.html" class="text-white hover:text-yellow-300 transition">Home</a>
+        <a href="#" class="text-white hover:text-yellow-300 transition">About</a>
+        <a href="#services" class="text-white hover:text-yellow-300 transition">Services</a>
+        <a href="contact.html" class="text-white hover:text-yellow-300 transition">Contact</a>
+      </nav>
+      <button class="md:hidden text-white focus:outline-none" onclick="toggleMenu()" aria-label="Toggle navigation menu" title="Toggle navigation menu">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+          <path fill-rule="evenodd" d="M3 5h14a1 1 0 010 2H3a1 1 0 110-2zm0 6h14a1 1 0 010 2H3a1 1 0 110-2zm0 6h14a1 1 0 010 2H3a1 1 0 110-2z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      
+      
+    </div>
+    <div class="md:hidden" id="mobileMenu">
+      <nav class="p-4 space-y-2">
+        <a href="homepage.html" class="block text-white hover:text-yellow-300 transition">Home</a>
+        <a href="#" class="block text-white hover:text-yellow-300 transition">About</a>
+        <a href="homepage.html#service" class="block text-white hover:text-yellow-300 transition">Services</a>
+        <a href="contact.html" class="block text-white hover:text-yellow-300 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 text-white py-20">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl lg:text-5xl font-bold animate-fadeIn">Welcome to African Horizons</h1>
+      <p class="mt-4 text-lg lg:text-xl max-w-2xl mx-auto">Discover the beauty, culture, and spirit of Africa through our platform. Join us as we explore and connect with the roots of the continent.</p>
+      <button class="mt-8 bg-black px-6 py-3 rounded-lg text-white font-semibold hover:bg-gray-800 transition">Get Started</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="services" class="container mx-auto py-16 px-4 lg:px-0">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 animate-slideIn">What We Offer</h2>
+      <p class="text-gray-600 mt-2">Our services bring the heart of Africa to you</p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+        <img src="../src/images/african_culture.jpg" alt="Culture" class="rounded-lg mb-4 w-full h-48 object-cover">
+        <h3 class="text-xl font-semibold text-gray-800">Cultural Heritage</h3>
+        <p class="text-gray-600 mt-2">Immerse yourself in the rich cultural heritage of Africa.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+        <img src="../src/images/african_nature.jpg" alt="Nature" class="rounded-lg mb-4 w-full h-48 object-cover">
+        <h3 class="text-xl font-semibold text-gray-800">Nature & Wildlife</h3>
+        <p class="text-gray-600 mt-2">Explore the untamed beauty of Africa’s landscapes and wildlife.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+        <img src="../src/images/african_people.jpg" alt="People" class="rounded-lg mb-4 w-full h-48 object-cover">
+        <h3 class="text-xl font-semibold text-gray-800">Connecting People</h3>
+        <p class="text-gray-600 mt-2">Build connections and learn more about African communities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4 lg:px-0 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 animate-slideIn">Testimonials</h2>
+      <p class="text-gray-600 mt-4 max-w-xl mx-auto">See what people are saying about their experience with us.</p>
+      
+      <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+          <p class="text-gray-700 italic">"An incredible journey that connected me with my heritage."</p>
+          <p class="mt-4 text-gray-600 font-semibold">- G. Aloyce</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+          <p class="text-gray-700 italic">"A breathtaking experience of Africa’s culture and nature!"</p>
+          <p class="mt-4 text-gray-600 font-semibold">- J. Mosha</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+          <p class="text-gray-700 italic">"The best way to experience Africa remotely. Highly recommend!"</p>
+          <p class="mt-4 text-gray-600 font-semibold">- Mgote R.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-yellow-500 to-red-500 py-6 text-white">
+    <div class="container mx-auto px-4 lg:px-10 text-center">
+      <p class="text-sm">&copy; 2024 African Horizons. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script to toggle mobile menu -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+</html>

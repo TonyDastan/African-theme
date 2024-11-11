@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Africa Theme</title>
+  <style>
+    /* Color scheme inspired by sunset in Africa */
+    :root {
+      --sunset-orange: #FF6A3D; /* Main sunset color */
+      --sunset-red: #FF3A20; /* Secondary sunset color */
+      --tree-shadow: #222222; /* Silhouette dark */
+      --background-gradient: linear-gradient(135deg, #FFB400, #FF6A3D, #FF3A20);
+    }
+
+    /* Reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--background-gradient);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 80px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      text-align: center;
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #FFFFFF;
+    }
+
+    input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      font-size: 1rem;
+      outline: none;
+      transition: background 0.3s ease;
+    }
+
+    input[type="email"]:focus, input[type="password"]:focus {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: var(--tree-shadow);
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #333333;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+    }
+
+    .options a {
+      color: #FFFFFF;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .options a:hover {
+      color: #FFDDC1;
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo">
+      <img src="../src/images/africa.png" alt="Africa Logo">
+    </div>
+    <h2>Login</h2>
+    <form onsubmit="return validateForm()">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <button type="submit" >Login </button>
+    </form>
+    <script>
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+    
+            if (email === '' || password === '') {
+                alert('Please enter both email and password.');
+                return false; // Prevents form submission
+            }
+    
+            // Redirect to the next page if both fields are filled
+            window.location.href = 'homepage.html';
+            return false; // Prevents form submission (since we already redirected)
+        }
+    </script>
+
+    <div class="options">
+      <a href="forget_password.html" class="text-sm hover:text-yellow-200 transition">Forgot Password?</a>
+      <a href="registration.html" class="text-sm hover:text-yellow-200 transition">Create an Account</a>
+    </div>
+  </div>
+
+
+</body>
+</html>
