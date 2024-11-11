@@ -29,6 +29,26 @@
 
       <button type="submit" class="w-full p-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition">Create Account</button>
     </form>
+    <script>
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmpassword = document.getElementById('confirm-password').value;
+    
+            if (email === '' || password === '') {
+                alert('Please enter both email and password.');
+                return false; // Prevents form submission
+            }
+            else if (password != confirmpassword) {
+                alert('Ensure Password and confirm password match.');
+                return false;
+            }
+    
+            // Redirect to the next page if both fields are filled
+            window.location.href = 'login.html';
+            return false; // Prevents form submission (since we already redirected)
+        }
+    </script>
 
     <div class="mt-4 text-center">
       <a href="login.html" class="text-sm hover:text-yellow-200 transition">Already have an account? Login</a>
