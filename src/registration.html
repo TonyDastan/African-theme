@@ -45,7 +45,9 @@
             }
     
             // Redirect to the next page if both fields are filled
-            window.location.href = 'login.html';
+            alert('registered successfully!');
+            setTimeout( () => {window.location.href = 'index.html';
+            }, 1000);
             return false; // Prevents form submission (since we already redirected)
         }
     </script>

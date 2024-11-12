@@ -22,14 +22,29 @@
         <a href="#services" class="text-white hover:text-yellow-300 transition">Services</a>
         <a href="contact.html" class="text-white hover:text-yellow-300 transition">Contact</a>
     </nav>
+    <button class="md:hidden text-white focus:outline-none" onclick="toggleMenu()" aria-label="Toggle navigation menu" title="Toggle navigation menu">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+          <path fill-rule="evenodd" d="M3 5h14a1 1 0 010 2H3a1 1 0 110-2zm0 6h14a1 1 0 010 2H3a1 1 0 110-2zm0 6h14a1 1 0 010 2H3a1 1 0 110-2z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
   </div>
+  <div class="md:hidden" id="mobileMenu">
+    <nav class="p-4 space-y-2">
+      <a href="homepage.html" class="block text-white hover:text-yellow-300 transition">Home</a>
+      <a href="#" class="block text-white hover:text-yellow-300 transition">About</a>
+      <a href="homepage.html#service" class="block text-white hover:text-yellow-300 transition">Services</a>
+      <a href="contact.html" class="block text-white hover:text-yellow-300 transition">Contact</a>
+    </nav>
   </nav>
+  </header>
 
   <!-- Header -->
+  <section class="bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 text-white py-20">
   <header class="text-center py-10">
     <h1 class="text-5xl font-bold">Get in Touch</h1>
     <p class="mt-4 text-lg">We'd love to hear from you. Send us a message below!</p>
   </header>
+ 
 
   <!-- Contact Section -->
   <section class="text-center py-10">
@@ -56,6 +71,7 @@
   <footer class="text-center py-6 bg-opacity-75 text-white">
     <p>&copy; 2024 Africa Theme. All rights reserved.</p>
   </footer>
+</section>
 
   <script>
     // Form submission handler
@@ -68,6 +84,12 @@
       // Reset form fields
       document.getElementById('contactForm').reset();
     });
+  </script>
+   <!-- Script to toggle mobile menu -->
+   <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
   </script>
 </body>
 </html>
